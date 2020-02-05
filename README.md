@@ -129,11 +129,14 @@ $$ -->
 <br/>
 &emsp;HtmlAgilityPack
 <br/>
+
 需要引用的程序集
 >using System.Drawing; <br/>
 >using System.Web;
 <br/>
 
+第三方类库
+&emsp;Msdn5Http
 
 个人引言：
 <br/>
