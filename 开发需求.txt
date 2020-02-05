@@ -1,0 +1,20 @@
+需求功能： 
+  多请求：多url
+  每个url可以自定义配置
+  请求后可设置下个请求
+  对内容的处理通过接口来实现，解耦，就如NCrawler
+  可设置定时请求
+
+考虑使用框架
+	Quartz.Net
+	Newtonsoft.json
+	HtmlAgilityPack.NetCore
+	Msdn5Http
+	NCrawler(借鉴)
+
+引用程序集
+	System.Web
+	System.Drawing
+
+第三方类库
+	Msdn5Http
