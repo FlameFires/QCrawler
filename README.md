@@ -130,7 +130,7 @@ $$ -->
 &emsp;HtmlAgilityPack
 <br/>
 需要引用的程序集
->using System.Drawing;
+>using System.Drawing; <br/>
 >using System.Web;
 <br/>
 
@@ -140,5 +140,5 @@ $$ -->
 &emsp;&emsp;希望各位大佬能给出有力的批评和给力的建议
 
 ---
-个人邮箱：<fire2019@qq.com>
+个人邮箱：<fire2019@qq.com> <br/>
 QQ: < 941049777 >
