@@ -1,0 +1,12 @@
+   #忽略gitignore文件  
+   .gitignore  
+   
+   # 忽略的文件
+   bin/
+   obj/
+   Properties/
+   
+   # 忽略的文件夹
+   /bin
+   /obj
+   /Properties
