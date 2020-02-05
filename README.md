@@ -127,7 +127,7 @@ $$ -->
 <br/>
 &emsp;Newtonsoft.Json
 <br/>
-&emsp;HtmlAgilityPack
+&emsp;HtmlAgilityPack.NetCore
 <br/>
 
 需要引用的程序集
