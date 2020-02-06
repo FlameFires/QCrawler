@@ -9,6 +9,7 @@ Properties/
 *.csproj
 *.txt
 .csproj
+Test.md
 
 # 忽略的文件夹
 /bin

@@ -39,6 +39,23 @@ namespace QCrawler
             this.requests = new List<Request>();
             requests.Add(request);
         }
+        /// <summary>
+        /// 多url采用同一配置
+        /// </summary>
+        /// <param name="urls">请求链接</param>
+        /// <param name="request">请求配置</param>
+        /// <param name="pipelines">管线处理程序</param>
+        public Crawler(IEnumerable<string> urls,Request request,params IPipeline[] pipelines) : this(pipelines)
+        {
+            var reqs = new List<Request>();
+            foreach (var item in urls)
+            {
+                var nreq = request;
+                nreq.Url = item;
+                reqs.Add(nreq);
+            }
+            this.requests = reqs;
+        }
         public Crawler(IList<Request> request, params IPipeline[] pipelines) : this(pipelines)
         {
             this.requests = request;

@@ -103,6 +103,13 @@ namespace QCrawler
         /// 请求次数
         /// </summary>
         public int RequestNum { get; set; } = 0;
+        /// <summary>
+        /// 出现的异常
+        /// </summary>
+        public Exception Exception { get; set; }
+        /// <summary>
+        /// 当前的Crawler
+        /// </summary>
         public Crawler crawler { get; set; }
     }
 }

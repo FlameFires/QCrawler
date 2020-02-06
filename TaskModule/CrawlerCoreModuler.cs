@@ -168,17 +168,20 @@ namespace QCrawler.TaskModule
                 mHelper.GetHttpResult(); // 响应
                 if (mHelper.httpResult == null) // 超时或其他异常
                 {
-                    OverEventHandler?.Invoke(crawler, new OverExceptionArg(new TimeoutException("mHelper"))); // 异常事件
+                    var exception = new TimeoutException("mHelper");
+                    response.Item.RequestException = exception;
+                    OverEventHandler?.Invoke(crawler, new OverExceptionArg(exception)); // 异常事件
                 }
-                else if (mHelper.httpResult.RequestException == null)
+                else if (mHelper.httpResult.RequestException == null) // 请求正常
                 {
-                    response.Item = mHelper.httpResult;
                 }
-                else
+                else // 其他异常情况
                 {
                     OverEventHandler?.Invoke(crawler, new OverExceptionArg(mHelper.httpResult.RequestException)); // 异常事件
                 }
-                
+
+                response.Item = mHelper.httpResult;
+
                 sw.Stop();
                 //swlist.Add(sw);
                 response.RequestNum++;

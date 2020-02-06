@@ -150,7 +150,7 @@ namespace QCrawler.SimpleHttpWork
             return token;
         }
         /// <summary>
-        /// 字符串转化为对象
+        /// 字符串<see cref="String"/>转化为对象<see cref="Object"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="data"></param>
@@ -161,9 +161,9 @@ namespace QCrawler.SimpleHttpWork
             return model;
         }
         /// <summary>
-        /// 对象转化成json字符串
+        /// 对象<see cref="Object"/>转化成json<see cref="String"/>字符串
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="data" ></param>
         /// <returns></returns>
         public static string ObjToStr(this object data)
         {
@@ -174,7 +174,7 @@ namespace QCrawler.SimpleHttpWork
 
         #region 帮助方法
         /// <summary>
-        /// 检查参数是否为空
+        /// 检查参数是否为空,true:一个或多个为null
         /// </summary>
         /// <param name="expressList"></param>
         /// <returns></returns>
@@ -182,9 +182,9 @@ namespace QCrawler.SimpleHttpWork
         {
             foreach (var item in expressList)
             {
-                if (string.IsNullOrEmpty(item)) return false;
+                if (string.IsNullOrEmpty(item)) return true;
             }
-            return true;
+            return false;
         }
         /// <summary>
         /// 未实现
